@@ -1,0 +1,61 @@
+footer{
+    margin-top: 10px;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+    height: max-content;
+}
+
+.icons{
+    display: flex;
+    justify-content: center;
+    color: white;
+    padding: 40px;
+    gap: 50px;
+}
+
+.icons > i{
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 30px;
+}
+
+.subscription{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.subscription p {
+    display: flex;
+    color: white;
+}
+
+.form{
+    display: flex;
+    gap: 20px;
+}
+
+.form button{
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.form > .input{
+    display: flex;
+    width: 50%;
+}
+
+.copyright{
+    display: flex;
+    justify-content: center;
+    color: white;
+    margin-top: 10px;
+}
+

@@ -1,0 +1,31 @@
+<div class="hero-container mt-3">
+    <div class="flex">
+        <div class="hero">
+            <div>
+                <h1>Don't disappoint your pet, they're not your parents</h1>
+                <h5>Our shops are spread across Austria, to make sure that all our animal friends are cared for</h5>
+                <button class="hero-btn btn btn-dark" routerLink="/products">Our products</button>
+            </div>
+        </div>
+    </div>
+    <div class="recommendation-container mt-3">
+        <h3>Why choose us?</h3>
+        <br>
+        <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 row-cols-xs-1">
+            @for (recommendation of recommendations; track $index) {
+                <div class="col-md-4">
+                    <div [innerHTML]="recommendation.icon"></div>
+                    <div class="card h-100 my-3 between-card">
+                        <div class="card-body">
+                            <h5 class="card-title">{{recommendation.title}}</h5>
+                            <p class="card-text">{{recommendation.text}}</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+    <div class="pedro mt-6">
+        <img height="250px" width="250px" src="https://media1.tenor.com/m/ZAMoMuQgf9UAAAAd/mapache-pedro.gif" alt="">
+    </div>
+</div>

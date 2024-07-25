@@ -1,0 +1,91 @@
+/* General container styling */
+.about-container {
+    margin-top: 1rem;
+    padding: 2rem 1rem;
+}
+
+.container {
+    text-align: center;
+}
+
+/* Raccoon image styling */
+.raccoon-img {
+    height: 250px;
+    width: 250px;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* General margin and padding adjustments */
+.mt-5 {
+    margin-top: 3rem !important;
+    padding: 2rem !important;
+}
+
+/* Card container for flexible layout */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Individual card styling */
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Card body styling */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Job container and row layout adjustments */
+.job-container {
+    padding: 0 1rem;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Job card styling */
+.job-card {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 100%;
+}
+
+/* Button styling */
+.btn {
+    margin-top: auto;
+}
+
+/* Title styling */
+h2 {
+    font-family: "Shrikhand", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 992px) {
+    .card-container .card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .card-container .card {
+        width: calc(100% - 20px);
+    }
+}

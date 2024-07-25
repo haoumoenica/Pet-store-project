@@ -1,0 +1,76 @@
+<div class="container">
+  <div class="content">
+    <!-- Your main content goes here -->
+
+    <!-- Table and Form -->
+    <div class="my-5 pt-5">
+      <table class="table my-5 pt-5">
+        <thead>
+          <tr>
+            <th scope="col">Product</th>
+            <th scope="col">Image</th>
+            <th scope="col">Price</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Actions</th>
+            <th scope="col">Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for(product of cartItems; track product; let i = $index){
+            <tr>
+              <td>{{product.name}}</td>
+              <td><img height="50" [src]="product.image" alt=""></td>
+              <td>{{product.price | currency:'EUR'}}</td>
+              <td>{{product.qtty}}</td>
+              <td>
+                <button (click)="onDecreaseQtty(product)" class="btn btn-warning">-</button>
+                <button (click)="onDelete(i)" class="btn btn-danger">Del</button>
+                <button (click)="onIncreaseQtty(product)" class="btn btn-success">+</button>
+              </td>
+              <td>{{product.qtty * product.price | currency:'EUR'}}</td>
+            </tr>
+          }
+        </tbody>
+        <tfoot>
+          @if (total > 40) {
+            <tr>
+              <th colspan="7">Net total: {{ total | currency:'EUR' }}</th>
+            </tr>
+            <tr>
+              <th colspan="7">Service charge (10%): {{ (total * 0.1)  | currency:'EUR' }}</th>
+            </tr>
+            <tr>
+              <th colspan="7">Gross total (-15% on purchases over 40€):  {{ total * 0.85 + (total * 0.1) | currency:'EUR' }}</th>
+            </tr>
+          } @else {
+            <tr>
+              <th colspan="7">Net total: {{ total | currency:'EUR' }}</th>
+            </tr>
+            <tr>
+              <th colspan="7">Service charge (10%): {{ (total * 0.1)  | currency:'EUR' }}</th>
+            </tr>
+            <th colspan="7">Gross total:  {{ total + (total * 0.1) | currency:'EUR' }}</th>
+          }
+        </tfoot>
+      </table>
+    </div>
+
+    <form>
+      <div class="mb-3">
+        <label for="exampleInputName" class="form-label">Name</label>
+        <input type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp">
+        <div id="nameHelp" class="form-text">We'll never share your personal info with anyone else.</div>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Check me out!</label>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>

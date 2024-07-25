@@ -1,0 +1,43 @@
+.navbar {
+  transition: all 0.5s linear;
+  font-family: "Shrikhand", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  padding: 10px 0; /* Add padding to the top and bottom */
+}
+
+.scroll-nav {
+  background-color: rgb(128, 128, 128);
+}
+
+.logo-style {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Shrikhand", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "ELSH" 0;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-container img {
+  width: 50px;
+  height: 50px;
+}
+
+.logo-container p {
+  margin: 0;
+}
+
+@media (max-width: 767.98px) {
+  .navbar {
+    padding: 15px 0; /* Increase padding on smaller screens */
+  }
+}

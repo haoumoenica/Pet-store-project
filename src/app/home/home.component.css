@@ -1,0 +1,74 @@
+.hero-container {
+    padding-top: 100px;
+}
+
+img {
+    /* Remove the height and width properties from the global img styling */
+    /* height: 800px;
+    width: 100%; */
+}
+
+.flex {
+    background-image: url('https://cdn.pixabay.com/photo/2018/11/17/19/47/kennels-for-pets-3821861_1280.jpg');
+    height: 50vh;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+.hero {
+    font-family: "Shrikhand", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero-btn {
+    margin-top: 30px;
+    border-radius: 5px;
+}
+
+.recommendation-container{
+    font-family: "Shrikhand", serif;
+    font-weight: 200;
+    font-style: normal;
+    text-align: center;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card{
+    height: 30vh;
+    max-width: 25rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h3{
+    margin-bottom: 20px;
+}
+
+.pedro {
+    width: 100%;  /* Adjust the width as needed */
+    text-align: center;  /* Center the content within this div */
+    margin: 20px auto;  /* Add some margin to space it out */
+}
+
+.pedro img {
+    margin-top: 2rem;
+    height: 500px;  /* New height, three times larger */
+    width: 500px;   /* New width, three times larger */
+}

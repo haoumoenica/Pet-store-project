@@ -1,0 +1,46 @@
+<div class="about-container mt- p-5">
+    <div class="container">
+        <div class="raccoon mt-6 text-center">
+            <img class="raccoon-img" src="https://media1.tenor.com/m/lsoEcg19738AAAAC/evil-smile-evil.gif" alt="">
+        </div>
+    </div>
+    <div class="card-container mt-5 p-5">
+        @for (content of content; track $index) {
+            <div class="card" style="width: 100%;">
+                <div class="card-body">
+                    <h5 class="card-title mb-1">{{content.title1}}</h5>
+                    <br>
+                    <p class="card-text">{{content.beginning}}</p>
+                    <br>
+                    <h5 class="card-title mb-1">{{content.title2}}</h5>
+                    <br>
+                    <p class="card-text">{{content.community}}</p>
+                    <br><br>
+                    <h5 class="card-title mb-1">{{content.title3}}</h5>
+                    <br>
+                    <p class="card-text"><i class="fa-solid fa-phone"></i> +{{content.phone}}</p>
+                    <p class="card-text"><i class="fa-solid fa-envelope"></i> {{content.email}}</p>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<h2>Join our team!</h2>
+<div class="job-container mt-5">
+        @for (job of jobs; track job) {
+            <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-xs-1">
+                <div class="card job-card mt-3 h-100" style="width: 100%; margin: 10px;">
+                    <div class="card-body">
+                        <h5 class="card-title mb-1">{{job.position}}</h5>
+                        <p class="card-text">{{job.jobDescription}}</p>
+                        <div>
+                            <p class="card-text">Starting from: {{job.salary | currency:'EUR'}}</p>
+                            <p class="card-text">{{job.jobLocation}}</p>
+                            <a class="btn btn-dark">Apply</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+</div>

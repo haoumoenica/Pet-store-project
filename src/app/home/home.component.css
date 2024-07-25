@@ -2,12 +2,6 @@
     padding-top: 100px;
 }
 
-img {
-    /* Remove the height and width properties from the global img styling */
-    /* height: 800px;
-    width: 100%; */
-}
-
 .flex {
     background-image: url('https://cdn.pixabay.com/photo/2018/11/17/19/47/kennels-for-pets-3821861_1280.jpg');
     height: 50vh;
@@ -62,13 +56,13 @@ h3{
 }
 
 .pedro {
-    width: 100%;  /* Adjust the width as needed */
-    text-align: center;  /* Center the content within this div */
-    margin: 20px auto;  /* Add some margin to space it out */
+    width: 100%;
+    text-align: center;
+    margin: 20px auto;
 }
 
 .pedro img {
     margin-top: 2rem;
-    height: 500px;  /* New height, three times larger */
-    width: 500px;   /* New width, three times larger */
+    height: 500px;
+    width: 500px; 
 }

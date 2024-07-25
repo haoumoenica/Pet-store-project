@@ -4,7 +4,7 @@
   font-weight: 400;
   font-style: normal;
   text-align: center;
-  padding: 10px 0; /* Add padding to the top and bottom */
+  padding: 10px 0;
 }
 
 .scroll-nav {
@@ -38,6 +38,6 @@
 
 @media (max-width: 767.98px) {
   .navbar {
-    padding: 15px 0; /* Increase padding on smaller screens */
+    padding: 15px 0;
   }
 }

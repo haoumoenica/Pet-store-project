@@ -11,6 +11,7 @@
     justify-content: center;
     align-items: center;
     padding-bottom: 30px;
+    border-radius: 10px;
 }
 
 .hero {
@@ -64,5 +65,6 @@ h3{
 .pedro img {
     margin-top: 2rem;
     height: 500px;
-    width: 500px; 
+    width: 500px;
+    border-radius: 10px;
 }

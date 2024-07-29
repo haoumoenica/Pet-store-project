@@ -1,3 +1,8 @@
+<div *ngIf="alertVisible" class="alert alert-success alert-dismissible fade show" role="alert">
+    {{ alertMessage }}
+    <button type="button" class="btn-close" aria-label="Close" (click)="closeAlert()"></button>
+  </div>
+
 <div class="card-container mb-3">
     <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 row-cols-xs-1 my-5 pt-3 mb-2">
         @for (product of products; track $index; let i = $index){

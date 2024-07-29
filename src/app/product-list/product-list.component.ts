@@ -6,30 +6,37 @@ import { CartService } from '../service/cart.service';
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
-  styleUrl: './product-list.component.css'
+  styleUrls: ['./product-list.component.css'] // Corrected 'styleUrl' to 'styleUrls'
 })
-export class ProductListComponent {
+export class ProductListComponent implements OnInit {
 
   product: IProduct = {} as IProduct;
-  products: IProduct [] = products;
+  products: IProduct[] = products;
   id: number = 0;
 
-  constructor(
-    private CartService: CartService,
+  alertVisible: boolean = false;
+  alertMessage: string = '';
 
-  ){}
+  constructor(private cartService: CartService) {}
 
-  addToCart(index: number): any{
+  ngOnInit(): void {}
+
+  addToCart(index: number): void {
     let selectedProduct = this.products[index];
-    this.CartService.addToCart(selectedProduct);
-    console.log(this.CartService.getCart());
+    this.cartService.addToCart(selectedProduct);
+    console.log(this.cartService.getCart());
+
+    // Show the alert
+    this.alertMessage = `${selectedProduct.name} has been added to your cart.`;
+    this.alertVisible = true;
+
+    // Hide the alert after 3 seconds
+    setTimeout(() => {
+      this.alertVisible = false;
+    }, 3000);
   }
 
-  // addToCart(index: number){
-  //   this.CartService.addToCart(this.product);
-  //   console.log(this.CartService.getCart([index]));
-  // }
-
+  closeAlert(): void {
+    this.alertVisible = false;
+  }
 }
- 
- 
